@@ -1,0 +1,37 @@
+src/
+ ├─ screens/
+ │   ├─ LockScreen.jsx
+ │   └─ Dashboard.jsx
+ └─ sections/
+     ├─ Profile.jsx
+     ├─ Skills.jsx
+     ├─ Achievements.jsx
+     ├─ Certificates.jsx
+     └─ Experience.jsx
+
+---------------------------------------------------------------------------------------------------------------
+backend/
+│
+├── models/
+│   ├── Profile.js
+│   ├── Experience.js
+│   ├── Certificates.js
+│   ├── Achievements.js
+│   └── Skills.js
+│
+├── routes/
+│   ├── profile.js
+│   ├── experience.js
+│   ├── certificates.js
+│   ├── achievements.js
+│   └── skills.js
+│
+├── controllers/
+│   ├── profileController.js
+│   ├── experienceController.js
+│   ├── certificatesController.js
+│   ├── achievementsController.js
+│   └── skillsController.js
+│
+├── app.js
+└── server.js
