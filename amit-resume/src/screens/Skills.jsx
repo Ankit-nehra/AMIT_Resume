@@ -1,5 +1,5 @@
 // src/sections/Skills.jsx
-import { FaTools } from "react-icons/fa";
+import { FaBrain } from "react-icons/fa";
 
 export default function Skills() {
   const skillsData = [
@@ -34,10 +34,10 @@ export default function Skills() {
               key={idx}
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50
                          rounded-xl p-3 sm:p-4 shadow-md hover:shadow-xl hover:border-teal-400/40
-                         transition-all duration-300 text-gray-200 font-medium flex items-center justify-between gap-2"
+                         transition-all duration-300 text-gray-200 font-medium flex items-center gap-3"
             >
+              <FaBrain className="text-teal-400 text-lg flex-shrink-0" />
               <span className="text-sm sm:text-base">{skill}</span>
-              <FaTools className="text-teal-400 text-lg flex-shrink-0" />
             </div>
           ))}
         </div>
