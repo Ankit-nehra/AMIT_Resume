@@ -47,37 +47,16 @@ export default function LockScreen({ onUnlock }) {
         background: "linear-gradient(135deg, #1a1a1f, #23232b, #1a1a1f)",
       }}
     >
+      {/* Background overlay */}
       <div className="absolute inset-0 bg-white/5 backdrop-blur-md"></div>
 
-      {/* Top Status Bar */}
-      <div className="flex justify-between items-center px-4 pt-4 text-gray-300 text-sm z-10 relative">
-        <div className="flex items-center gap-1">
-          <div className="flex gap-[2px]">
-            <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
-            <span className="w-1 h-2 bg-gray-300 rounded-full"></span>
-            <span className="w-1 h-3 bg-gray-300 rounded-full"></span>
-            <span className="w-1 h-4 bg-gray-300 rounded-full"></span>
-          </div>
-          <span className="ml-1">5G</span>
-        </div>
-        <span className="text-gray-200 font-medium">{time}</span>
-        <div className="flex items-center gap-2">
-          <div className="relative w-4 h-4">
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gray-300 rounded-full"></span>
-            <span className="absolute bottom-1 left-1 w-2 h-[2px] bg-gray-300 rounded-full"></span>
-          </div>
-          <div className="flex items-center border border-gray-300 rounded-sm w-8 h-4 p-[1px]">
-            <div className="bg-gray-300 h-full w-7/8 rounded-sm"></div>
-          </div>
-        </div>
-      </div>
-
-      {/* Center */}
-      <div className="flex flex-col items-center justify-center h-full text-center z-10 relative">
+      {/* Center content */}
+      <div className="flex flex-col items-center pt-24 sm:pt-32 px-6 text-center z-10 relative">
         <p className="text-gray-400 text-lg mb-2">{date}</p>
-        <h1 className="text-teal-400 text-8xl font-light">{time}</h1>
+        <h1 className="text-teal-400 text-8xl font-light leading-none">{time}</h1>
 
-        <div className="mt-8 px-10 py-6 bg-white/10 backdrop-blur-lg rounded-3xl border border-gray-700 shadow-inner shadow-black/20">
+        {/* User info card */}
+        <div className="mt-8 px-8 py-6 bg-white/10 backdrop-blur-lg rounded-3xl border border-gray-700 shadow-inner shadow-black/20 w-full max-w-sm">
           <div className="border-b border-teal-400 pb-2">
             <p className="text-2xl font-semibold text-teal-400">Amit Nehra</p>
           </div>
@@ -87,8 +66,8 @@ export default function LockScreen({ onUnlock }) {
         </div>
       </div>
 
-      {/* Swipe Hint */}
-      <div className="absolute bottom-16 w-full flex justify-center z-10">
+      {/* Swipe hint */}
+      <div className="absolute bottom-12 w-full flex justify-center z-10">
         <div className="bg-white/20 backdrop-blur-md px-4 py-1 rounded-full flex items-center gap-2 animate-bounce">
           <span className="text-gray-200 text-sm">Swipe up</span>
           <svg
