@@ -32,7 +32,7 @@ export default function Profile() {
     permanentAddress: "Panipat, Haryana",
     phone: "8814089451",
     email: "Nehraa728@gmail.com",
-    linkedin: "https://www.linkedin.com/in/amit-nehra-801b60236",
+    linkedin: "linkedin.com/in/amit-nehra-801b60236",
     professionalSummary: `Dedicated Operations Executive with over 2 years of experience in operations management,
     adept at managing and optimizing warehousing operations, addressing client requirements, and streamlining
     processes to improve efficiency. Expertise in WMS, high-turnover inventory management, and leading
