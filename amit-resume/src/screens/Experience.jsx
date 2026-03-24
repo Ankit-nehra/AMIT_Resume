@@ -67,35 +67,45 @@ export default function Experience() {
 
   return (
     <div className="bg-gray-900 min-h-screen flex flex-col items-center py-6 sm:py-8">
-
-      {/* Top margin only for heading */}
+      {/* Heading */}
       <h1 className="text-3xl sm:text-4xl font-bold text-teal-400 mt-6 sm:mt-8 mb-6 text-center border-b-2 border-teal-500 pb-2 w-fit">
         Experience
       </h1>
 
-      {/* Experience Cards: no outer container, full width */}
-      <div className="flex flex-col gap-6 w-full max-w-4xl px-4 sm:px-0">
-        {experienceData.map((exp, idx) => (
-          <div
-            key={idx}
-            className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl hover:border-teal-400/40 transition-all duration-300"
-          >
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 gap-1 sm:gap-0">
-              <h2 className="text-lg sm:text-xl font-semibold text-gray-200 flex items-center gap-2">
-                <FaBriefcase className="text-teal-400" /> {exp.role}
-              </h2>
-              <span className="flex items-center text-gray-400 gap-2">
-                <FaCalendarAlt className="text-teal-400" /> {exp.period}
-              </span>
+      {/* Timeline container */}
+      <div className="relative w-full max-w-4xl px-4 sm:px-0">
+
+        {/* Vertical line outside card */}
+        <div className="absolute left-2 sm:left-4 top-0 h-full border-l-2 border-teal-500"></div>
+
+        {/* Experience Cards */}
+        <div className="flex flex-col gap-6">
+          {experienceData.map((exp, idx) => (
+            <div
+              key={idx}
+              className="relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 ml-8 sm:ml-10"
+            >
+              {/* Marker on line */}
+              <div className="absolute -left-4 sm:-left-5 top-6 w-4 h-4 bg-teal-400 rounded-full border-2 border-gray-900"></div>
+
+              {/* Card content */}
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 gap-1 sm:gap-0">
+                <h2 className="text-lg sm:text-xl font-semibold text-gray-200 flex items-center gap-2">
+                  <FaBriefcase className="text-teal-400" /> {exp.role}
+                </h2>
+                <span className="flex items-center text-gray-400 gap-2">
+                  <FaCalendarAlt className="text-teal-400" /> {exp.period}
+                </span>
+              </div>
+              <p className="text-gray-400 text-sm sm:text-base mb-2">{exp.company} | {exp.location}</p>
+              <ul className="list-disc pl-5 text-gray-300 space-y-1">
+                {exp.description.map((desc, i) => (
+                  <li key={i} className="text-sm sm:text-base">{desc}</li>
+                ))}
+              </ul>
             </div>
-            <p className="text-gray-400 text-sm sm:text-base mb-2">{exp.company} | {exp.location}</p>
-            <ul className="list-disc pl-5 text-gray-300 space-y-1">
-              {exp.description.map((desc, i) => (
-                <li key={i} className="text-sm sm:text-base">{desc}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
