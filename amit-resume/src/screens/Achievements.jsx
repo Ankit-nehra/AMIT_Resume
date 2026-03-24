@@ -15,15 +15,15 @@ export default function Achievements() {
     <div className="bg-gray-900 min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 md:px-8">
       
       {/* Container */}
-      <div className="w-full max-w-4xl bg-gray-800/40 backdrop-blur-xl rounded-3xl p-8 sm:p-10 shadow-2xl">
+      <div className="w-full max-w-4xl bg-gray-800/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-2xl">
 
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-teal-400 mb-8 text-center border-b-2 border-teal-500 pb-2 w-fit mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-bold text-teal-400 mb-6 text-center border-b-2 border-teal-500 pb-2 w-fit mx-auto">
           Achievements
         </h1>
 
         {/* Achievement List */}
-        <ul className="flex flex-col gap-5">
+        <ul className="flex flex-col gap-4">
           {achievementsData.map((ach, idx) => (
             <li
               key={idx}
