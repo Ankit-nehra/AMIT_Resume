@@ -51,12 +51,19 @@ export default function LockScreen({ onUnlock }) {
       <div className="absolute inset-0 bg-white/5 backdrop-blur-md"></div>
 
       {/* Center content */}
-      <div className="flex flex-col items-center pt-24 sm:pt-32 px-6 text-center z-10 relative">
+      <div className="flex flex-col items-center pt-24 sm:pt-28 px-6 text-center z-10 relative">
+        {/* Profile Image */}
+        <img
+          src="/profile.enc" // Place your profile image in public folder
+          alt="Profile"
+          className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-teal-400 shadow-lg mb-4 object-cover"
+        />
+
         <p className="text-gray-400 text-lg mb-2">{date}</p>
         <h1 className="text-teal-400 text-8xl font-light leading-none">{time}</h1>
 
         {/* User info card */}
-        <div className="mt-8 px-8 py-6 bg-white/10 backdrop-blur-lg rounded-3xl border border-gray-700 shadow-inner shadow-black/20 w-full max-w-sm">
+        <div className="mt-6 px-8 py-6 bg-white/10 backdrop-blur-lg rounded-3xl border border-gray-700 shadow-inner shadow-black/20 w-full max-w-sm transition-transform duration-500 transform hover:-translate-y-1">
           <div className="border-b border-teal-400 pb-2">
             <p className="text-2xl font-semibold text-teal-400">Amit Nehra</p>
           </div>
