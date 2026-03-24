@@ -66,7 +66,7 @@ export default function Experience() {
   ];
 
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col items-center py-6 sm:py-8">
+    <div className="bg-gray-900 min-h-screen flex flex-col items-center py-4 sm:py-8">
 
       {/* Top margin only for heading */}
       <h1 className="text-3xl sm:text-4xl font-bold text-teal-400 mt-6 sm:mt-8 mb-6 text-center border-b-2 border-teal-500 pb-2 w-fit">
