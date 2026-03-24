@@ -11,17 +11,14 @@ export default function Certificates() {
   ];
 
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col items-center py-6 sm:py-8 px-4 sm:px-6 md:px-8">
+    <div className="bg-gray-900 min-h-screen flex flex-col items-center py-6 sm:py-8">
+      {/* Heading with top margin */}
+      <h1 className="text-3xl sm:text-4xl font-bold text-teal-400 mt-6 sm:mt-8 mb-6 text-center border-b-2 border-teal-500 pb-2 w-fit">
+        Certificates
+      </h1>
 
       {/* Container */}
-      <div className="w-full max-w-4xl bg-gray-800/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-2xl">
-
-        {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-teal-400 mb-6 text-center border-b-2 border-teal-500 pb-2 w-fit mx-auto">
-          Certificates
-        </h1>
-
-        {/* Certificates List */}
+      <div className="w-full max-w-4xl px-4 sm:px-0 bg-gray-800/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-2xl">
         <ul className="flex flex-col gap-4">
           {certificatesData.map((cert, idx) => (
             <li
@@ -35,7 +32,6 @@ export default function Certificates() {
             </li>
           ))}
         </ul>
-
       </div>
     </div>
   );
