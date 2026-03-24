@@ -74,7 +74,7 @@ export default function LockScreen({ onUnlock }) {
       </div>
 
       {/* Swipe hint */}
-      <div className="absolute bottom-12 w-full flex justify-center z-10">
+      <div className="absolute bottom-21 w-full flex justify-center z-10">
         <div className="bg-white/20 backdrop-blur-md px-4 py-1 rounded-full flex items-center gap-2 animate-bounce">
           <span className="text-gray-200 text-sm">Swipe up</span>
           <svg
