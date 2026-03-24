@@ -76,7 +76,7 @@ export default function Profile() {
 
         <div className="flex items-start gap-2">
           <FaMapMarkerAlt className="text-teal-400 mt-1" />
-          <span>Permanent: {profileData.permanentAddress}</span>
+          <span>Address: {profileData.permanentAddress}</span>
         </div>
 
         <div className="flex items-center gap-2">
