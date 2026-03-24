@@ -34,9 +34,9 @@ export default function Skills() {
               key={idx}
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50
                          rounded-xl p-3 sm:p-4 shadow-md hover:shadow-xl hover:border-teal-400/40
-                         transition-all duration-300 text-gray-200 text-center font-medium flex items-center justify-center gap-2"
+                         transition-all duration-300 text-gray-200 font-medium flex flex-col items-center gap-2 text-center"
             >
-              <FaTools className="text-teal-400" />
+              <FaTools className="text-teal-400 text-lg" />
               <span className="text-sm sm:text-base">{skill}</span>
             </div>
           ))}
