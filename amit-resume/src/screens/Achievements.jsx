@@ -12,7 +12,7 @@ export default function Achievements() {
   ];
 
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 md:px-8">
+    <div className="bg-gray-900 min-h-screen flex flex-col items-center py-6 sm:py-8 px-4 sm:px-6 md:px-8">
       
       {/* Container */}
       <div className="w-full max-w-4xl bg-gray-800/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-2xl">
