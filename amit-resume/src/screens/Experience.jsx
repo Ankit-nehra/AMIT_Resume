@@ -66,41 +66,36 @@ export default function Experience() {
   ];
 
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col items-center py-6 px-4 sm:px-6 md:px-8">
+    <div className="bg-gray-900 min-h-screen flex flex-col items-center py-6 sm:py-8">
 
-      {/* Container */}
-      <div className="w-full max-w-4xl bg-gray-800/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-2xl">
+      {/* Top margin only for heading */}
+      <h1 className="text-3xl sm:text-4xl font-bold text-teal-400 mt-6 sm:mt-8 mb-6 text-center border-b-2 border-teal-500 pb-2 w-fit">
+        Experience
+      </h1>
 
-        {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-teal-400 mb-6 text-center border-b-2 border-teal-500 pb-2 w-fit mx-auto">
-          Experience
-        </h1>
-
-        {/* Experience Cards */}
-        <div className="flex flex-col gap-6">
-          {experienceData.map((exp, idx) => (
-            <div
-              key={idx}
-              className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl hover:border-teal-400/40 transition-all duration-300"
-            >
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 gap-1 sm:gap-0">
-                <h2 className="text-lg sm:text-xl font-semibold text-gray-200 flex items-center gap-2">
-                  <FaBriefcase className="text-teal-400" /> {exp.role}
-                </h2>
-                <span className="flex items-center text-gray-400 gap-2">
-                  <FaCalendarAlt className="text-teal-400" /> {exp.period}
-                </span>
-              </div>
-              <p className="text-gray-400 text-sm sm:text-base mb-2">{exp.company} | {exp.location}</p>
-              <ul className="list-disc pl-5 text-gray-300 space-y-1">
-                {exp.description.map((desc, i) => (
-                  <li key={i} className="text-sm sm:text-base">{desc}</li>
-                ))}
-              </ul>
+      {/* Experience Cards: no outer container, full width */}
+      <div className="flex flex-col gap-6 w-full max-w-4xl px-4 sm:px-0">
+        {experienceData.map((exp, idx) => (
+          <div
+            key={idx}
+            className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 sm:p-6 shadow-md hover:shadow-xl hover:border-teal-400/40 transition-all duration-300"
+          >
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 gap-1 sm:gap-0">
+              <h2 className="text-lg sm:text-xl font-semibold text-gray-200 flex items-center gap-2">
+                <FaBriefcase className="text-teal-400" /> {exp.role}
+              </h2>
+              <span className="flex items-center text-gray-400 gap-2">
+                <FaCalendarAlt className="text-teal-400" /> {exp.period}
+              </span>
             </div>
-          ))}
-        </div>
-
+            <p className="text-gray-400 text-sm sm:text-base mb-2">{exp.company} | {exp.location}</p>
+            <ul className="list-disc pl-5 text-gray-300 space-y-1">
+              {exp.description.map((desc, i) => (
+                <li key={i} className="text-sm sm:text-base">{desc}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   );
