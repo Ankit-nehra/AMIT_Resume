@@ -69,8 +69,10 @@ export default function LockScreen({ onUnlock }) {
           className={styles.profile}
         />
 
+      <div className={styles.timeBox}>
         <p className={styles.date}>{date}</p>
         <h1 className={styles.time}>{time}</h1>
+      </div>
 
         <div className={styles.card}>
           <h2>Amit Nehra</h2>
