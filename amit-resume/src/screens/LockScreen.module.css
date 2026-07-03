@@ -90,7 +90,7 @@
 /* swipe */
 .swipe {
   position: absolute;
-  bottom: 30px;
+  bottom: 80px;
   width: 100%;
   display: flex;
   justify-content: center;
