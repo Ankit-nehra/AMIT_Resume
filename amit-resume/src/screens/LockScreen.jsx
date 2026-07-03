@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./LockScreen.module.css";
-
+import wallpaper from "../../public/om.jpg"
 export default function LockScreen({ onUnlock }) {
   const [time, setTime] = useState("");
   const [date, setDate] = useState("");
@@ -51,7 +51,9 @@ export default function LockScreen({ onUnlock }) {
       onTouchEnd={(e) => handleEnd(e.changedTouches[0].clientY)}
       onMouseDown={(e) => handleStart(e.clientY)}
       onMouseUp={(e) => handleEnd(e.clientY)}
-     
+      style={{
+        backgroundImage: `url(${wallpaper})`,
+      }}
     >
       {/* top status bar */}
       <div className={styles.statusBar}>
